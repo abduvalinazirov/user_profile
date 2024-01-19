@@ -1,0 +1,20 @@
+.user__details {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+}
+.detail__input {
+  width: calc(100% - 180px);
+  border: 1px solid rgba(0, 0, 0, 0.211);
+  border-radius: 4px;
+  padding: 5px;
+}
+.save__details {
+  background-color: #12a0bd;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 7px 10px;
+  display: block;
+  margin: 15px auto 0;
+}

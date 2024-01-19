@@ -1,0 +1,63 @@
+.person__info {
+  width: 400px;
+  padding: 40px 30px;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.168);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.person__image {
+  max-width: 70%;
+  height: 320px;
+  object-fit: cover;
+  display: inline-block;
+  border-radius: 20px;
+  margin-bottom: 15px;
+}
+.person__name {
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 140%;
+  margin-bottom: 10px;
+}
+.segment__elements {
+  display: flex;
+  align-items: center;
+  border-radius: 1000px;
+  padding: 8px 10px;
+  width: auto;
+  position: relative;
+  box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.247), inset 0px -5px 15px rgba(255, 255, 255, 0.4);
+}
+.segment__element {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 100%;
+  color: #12a0bd;
+  padding: 13px 20px;
+  border-radius: 1000px;
+  border: none;
+  background-color: transparent;
+  z-index: 2;
+  position: relative;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.segment__element.active {
+  color: #fff;
+}
+.segment__element-mask {
+  /* padding: 13px 20px; */
+  border-radius: 20px;
+  background-color: #12a0bd;
+  position: absolute;
+  left: 10px;
+  top: 8px;
+  width: 10px;
+  height: 10px;
+  z-index: 1;
+  transition: 0.3s;
+  height: calc(100% - 16px);
+}

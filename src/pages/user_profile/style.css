@@ -1,0 +1,36 @@
+.user__profile {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+}
+.user__profile__wrapper {
+  display: flex;
+  column-gap: 30px;
+}
+.profile__content {
+  width: calc(100% - 430px);
+}
+.profile__content > div {
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.168);
+  border-radius: 10px;
+  padding: 20px;
+}
+.detail__name {
+  width: 180px;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 120%;
+}
+
+.user_detail {
+  display: flex;
+}
+
+.detail__name {
+  width: 180px;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 120%;
+}
