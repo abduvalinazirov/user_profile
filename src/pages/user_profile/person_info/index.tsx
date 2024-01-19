@@ -8,7 +8,7 @@ interface PersonInfoProps {
 
 const PersonInfo: React.FC<PersonInfoProps> = ({ status, setStatus }) => {
   useEffect(() => {
-    let segment__elements: HTMLDivElement[] = Array.from(document?.querySelectorAll(".payment_segments_wrapper .segment__element"));
+    let segment__elements: HTMLDivElement[] = Array.from(document?.querySelectorAll(".segments_wrapper .segment__element"));
     let segment__mask: HTMLDivElement | null = document.querySelector(".segment__element-mask");
     if (segment__mask) {
       segment__mask.style.width = segment__elements[0].offsetWidth + "px";
@@ -33,7 +33,7 @@ const PersonInfo: React.FC<PersonInfoProps> = ({ status, setStatus }) => {
       <img src="/images/person.jpg" alt="person" className="person__image" />
       <h3 className="person__name">Abduvali Nazirov</h3>
       <div className="toggle__buttons">
-        <div className="payment_segments_wrapper">
+        <div className="segments_wrapper">
           <div className="segment__elements">
             <div className="segment__element-mask"></div>
             <button onClick={() => setStatus("view")} className={`segment__element ${status === "view" && "active"}`}>

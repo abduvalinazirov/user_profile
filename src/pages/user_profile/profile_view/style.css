@@ -1,12 +1,6 @@
 .user_detail {
   display: flex;
 }
-.detail__name {
-  width: 180px;
-  font-size: 15px;
-  font-weight: 500;
-  line-height: 120%;
-}
 .detail__content {
   width: calc(100% - 180px);
   font-size: 15px;
@@ -17,4 +11,25 @@
   height: 2px;
   background-color: rgba(0, 0, 0, 0.114);
   margin: 10px 0;
+}
+
+@media screen and (max-width: 1200px) {
+  .detail__name {
+    width: 140px;
+    font-size: 14px;
+    line-height: 140%;
+  }
+  .detail__content {
+    width: calc(100% - 140px);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .detail__content {
+    width: calc(100% - 100px);
+  }
+}
+
+.detail__name {
+  width: 100px;
 }

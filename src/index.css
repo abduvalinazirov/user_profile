@@ -13,3 +13,24 @@ body {
   width: 1170px;
   margin: 0 auto;
 }
+
+@media screen and (max-width: 1200px) {
+  .container {
+    width: 990px;
+  }
+}
+@media screen and (max-width: 1030px) {
+  .container {
+    width: 767px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .container {
+    width: 576px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .container {
+    width: 94%;
+  }
+}

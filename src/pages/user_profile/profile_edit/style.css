@@ -1,15 +1,18 @@
 .user__details {
   display: flex;
   flex-direction: column;
-  row-gap: 16px;
+  row-gap: 15px;
 }
 .detail__input {
   width: calc(100% - 180px);
   border: 1px solid rgba(0, 0, 0, 0.211);
   border-radius: 4px;
   padding: 5px;
+  font-size: 14px;
+  line-height: 100%;
 }
 .save__details {
+  font-size: 14px;
   background-color: #12a0bd;
   color: white;
   border: none;
