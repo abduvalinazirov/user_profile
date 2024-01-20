@@ -6,6 +6,8 @@ import reportWebVitals from "./reportWebVitals";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import UserInfo from "./pages/user_profile";
 import { QueryClient, QueryClientProvider } from "react-query";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
 
@@ -34,6 +36,7 @@ const router = createBrowserRouter([
 enableMocking().then(() => {
   root.render(
     <React.StrictMode>
+      <ToastContainer />
       <QueryClientProvider client={queryClient}>
         <RouterProvider router={router} />
       </QueryClientProvider>

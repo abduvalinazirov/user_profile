@@ -4,6 +4,7 @@ import InputComponent from "../../../../components/Input";
 import { useMutation } from "react-query";
 import { updateUserProfile } from "../../../../services/userApi";
 import "./style.css";
+import { toast } from "react-toastify";
 
 interface ProfileEditProps {
   user: IUser;
@@ -17,7 +18,7 @@ const ProfileEdit: React.FC<ProfileEditProps> = ({ user, refetch }) => {
 
   const { mutate, isLoading } = useMutation(updateUserProfile, {
     onSuccess: () => {
-      alert("Profile updated successfully");
+      toast.success('Profile updated successfully!')
       refetch();
     },
   });
