@@ -1,6 +1,6 @@
-import PersonInfo from "./person_info";
-import ProfileView from "./profile_view";
-import ProfileEdit from "./profile_edit";
+import PersonInfo from "./components/person_info";
+import ProfileView from "./components/profile_view";
+import ProfileEdit from "./components/profile_edit";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { useQuery } from "react-query";

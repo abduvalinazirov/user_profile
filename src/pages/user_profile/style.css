@@ -1,8 +1,9 @@
 .user__profile {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 20px;
 }
 .user__profile__wrapper {
   display: flex;

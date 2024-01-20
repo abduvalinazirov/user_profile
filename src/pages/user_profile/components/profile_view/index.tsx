@@ -1,4 +1,4 @@
-import { IUser } from "../../../types/data.models";
+import { IUser } from "../../../../types/data.models";
 import "./style.css";
 
 interface ProfileViewProps {

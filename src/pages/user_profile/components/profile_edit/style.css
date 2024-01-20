@@ -28,3 +28,9 @@
   margin: 15px auto 0;
   cursor: pointer;
 }
+
+@media screen and (max-width: 600px) {
+  .detail__input {
+    width: calc(100% - 115px);
+  }
+}

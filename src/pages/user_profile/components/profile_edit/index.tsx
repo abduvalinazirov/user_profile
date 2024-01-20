@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { IUser } from "../../../types/data.models";
-import InputComponent from "../../../components/Input";
+import { IUser } from "../../../../types/data.models";
+import InputComponent from "../../../../components/Input";
 import { useMutation } from "react-query";
-import { updateUserProfile } from "../../../services/userApi";
+import { updateUserProfile } from "../../../../services/userApi";
 import "./style.css";
 
 interface ProfileEditProps {
@@ -15,8 +15,9 @@ const ProfileEdit: React.FC<ProfileEditProps> = ({ user, refetch }) => {
   const [nameError, setNameError] = useState<string | null>(null);
   const [emailError, setEmailError] = useState<string | null>(null);
 
-  const mutation = useMutation(updateUserProfile, {
+  const { mutate, isLoading } = useMutation(updateUserProfile, {
     onSuccess: () => {
+      alert("Profile updated successfully");
       refetch();
     },
   });
@@ -37,11 +38,10 @@ const ProfileEdit: React.FC<ProfileEditProps> = ({ user, refetch }) => {
     const emailTest = emailRegex.test(userData.email);
     setEmailError(!emailTest ? "Enter a valid email address" : null);
     if (!nameError && emailTest) {
-      mutation.mutate(userData);
+      mutate(userData);
     }
   };
 
-  console.log(emailError);
   return (
     <div className="profile__edit">
       <div className="user__details">
@@ -74,7 +74,7 @@ const ProfileEdit: React.FC<ProfileEditProps> = ({ user, refetch }) => {
           </div>
         </div>
       </div>
-      <button className="save__details" onClick={saveDetails}>
+      <button className="save__details" onClick={saveDetails} disabled={isLoading}>
         Save
       </button>
     </div>
