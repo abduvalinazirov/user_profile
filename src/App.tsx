@@ -1,20 +1,30 @@
 import { useQuery } from "react-query";
-import "./App.css";
 import { IUser } from "./types/data.models";
-
-const fetchUsers = async (): Promise<IUser[]> => {
-  const response = await fetch("https://mswjs.io/");
-  return response.json();
-};
+import { Link } from "react-router-dom";
+import { getUsers } from "./services/userApi";
+import "./App.css";
 
 function App() {
-  const { data: users, isLoading } = useQuery<IUser[]>("users-list", fetchUsers);
+  const { data: users, isLoading } = useQuery<IUser[]>("users-list", getUsers);
 
   if (isLoading) {
     return <div>Loading...</div>;
   }
-  console.log(users);
-  return <div>App</div>;
+
+  return (
+    <div>
+      <div className="container">
+        <h2 className="users__title">Users list</h2>
+        <ul className="users__list">
+          {users?.map((user) => (
+            <li className="user__item" key={user.id}>
+              <Link to={`/profile/${user.id}`}>{user.name}</Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  );
 }
 
 export default App;

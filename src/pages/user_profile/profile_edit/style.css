@@ -5,11 +5,17 @@
 }
 .detail__input {
   width: calc(100% - 180px);
-  border: 1px solid rgba(0, 0, 0, 0.211);
   border-radius: 4px;
+  display: block;
+}
+.detail__input input,
+.detail__input textarea {
   padding: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.211);
   font-size: 14px;
   line-height: 100%;
+  width: 100%;
+  outline-color: #12a0bd;
 }
 .save__details {
   font-size: 14px;
@@ -20,4 +26,5 @@
   padding: 7px 10px;
   display: block;
   margin: 15px auto 0;
+  cursor: pointer;
 }

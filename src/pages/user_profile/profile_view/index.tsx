@@ -1,24 +1,26 @@
+import { IUser } from "../../../types/data.models";
 import "./style.css";
 
-const ProfileView = () => {
+interface ProfileViewProps {
+  user: IUser;
+}
+
+const ProfileView: React.FC<ProfileViewProps> = ({ user }) => {
   return (
     <div className="profile__view">
       <div className="user_detail">
         <h4 className="detail__name">Full Name</h4>
-        <p className="detail__content">Abduvali Nazirov</p>
+        <p className="detail__content">{user.name}</p>
       </div>
       <div className="detail__hr"></div>
       <div className="user_detail">
         <h4 className="detail__name">Email</h4>
-        <p className="detail__content">nazirov@gmail.com</p>
+        <p className="detail__content">{user.email}</p>
       </div>
       <div className="detail__hr"></div>
       <div className="user_detail">
         <h4 className="detail__name">Bio</h4>
-        <p className="detail__content">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint rem facilis deserunt dolores voluptate, aut veritatis repudiandae quos atque
-          odit?
-        </p>
+        <p className="detail__content">{user.bio}</p>
       </div>
     </div>
   );

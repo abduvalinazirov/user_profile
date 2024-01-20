@@ -1,6 +1,3 @@
-.user_detail {
-  display: flex;
-}
 .detail__content {
   width: calc(100% - 180px);
   font-size: 15px;

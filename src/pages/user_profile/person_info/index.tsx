@@ -1,12 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import "./style.css";
+import { IUser } from "../../../types/data.models";
 
 interface PersonInfoProps {
-  status: "view" | "edit"; // Assuming status is a string, you can replace it with the actual type
-  setStatus: React.Dispatch<React.SetStateAction<"view" | "edit">>; // Assuming setStatus is a function that sets a string
+  status: "view" | "edit";
+  setStatus: React.Dispatch<React.SetStateAction<"view" | "edit">>;
+  user: IUser;
 }
 
-const PersonInfo: React.FC<PersonInfoProps> = ({ status, setStatus }) => {
+const PersonInfo: React.FC<PersonInfoProps> = ({ status, setStatus, user }) => {
   useEffect(() => {
     let segment__elements: HTMLDivElement[] = Array.from(document?.querySelectorAll(".segments_wrapper .segment__element"));
     let segment__mask: HTMLDivElement | null = document.querySelector(".segment__element-mask");
@@ -30,8 +32,8 @@ const PersonInfo: React.FC<PersonInfoProps> = ({ status, setStatus }) => {
   }, []);
   return (
     <div className="person__info">
-      <img src="/images/person.jpg" alt="person" className="person__image" />
-      <h3 className="person__name">Abduvali Nazirov</h3>
+      <img src={user.image} alt="person" className="person__image" />
+      <h3 className="person__name">{user?.name}</h3>
       <div className="toggle__buttons">
         <div className="segments_wrapper">
           <div className="segment__elements">
