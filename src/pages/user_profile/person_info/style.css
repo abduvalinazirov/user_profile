@@ -34,7 +34,7 @@
   font-weight: 600;
   font-size: 16px;
   line-height: 100%;
-  color: #12a0bd;
+  color: var(--main-color);
   padding: 13px 20px;
   border-radius: 1000px;
   border: none;
@@ -50,7 +50,7 @@
 .segment__element-mask {
   /* padding: 13px 20px; */
   border-radius: 20px;
-  background-color: #12a0bd;
+  background-color: var(--main-color);
   position: absolute;
   left: 10px;
   top: 8px;
@@ -81,6 +81,10 @@
     max-width: 90%;
     height: 280px;
     margin-bottom: 10px;
+  }
+  .person__name {
+    font-size: 22px;
+    line-height: 120%;
   }
 }
 @media screen and (max-width: 800px) {

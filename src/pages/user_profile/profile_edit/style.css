@@ -15,11 +15,11 @@
   font-size: 14px;
   line-height: 100%;
   width: 100%;
-  outline-color: #12a0bd;
+  outline-color: var(--main-color);
 }
 .save__details {
   font-size: 14px;
-  background-color: #12a0bd;
+  background-color: var(--main-color);
   color: white;
   border: none;
   border-radius: 4px;

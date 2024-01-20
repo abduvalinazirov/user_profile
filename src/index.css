@@ -1,7 +1,11 @@
+:root {
+  --error: #f44336;
+  --main-color: #12a0bd;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -15,12 +19,12 @@ body {
 }
 
 .input__error {
-  border-color: #f44336 !important;
-  color: #f44336;
-  outline-color: #f44336 !important;
+  border-color: var(--error) !important;
+  color: var(--error);
+  outline-color: var(--error) !important;
 }
 .input__error::placeholder {
-  color: #f44336;
+  color: var(--error);
 }
 
 .error__text {
@@ -29,7 +33,7 @@ body {
   top: 0;
   font-size: 11px;
   transform: translateY(-100%);
-  color: #f44336;
+  color: var(--error);
 }
 
 @media screen and (max-width: 1200px) {
