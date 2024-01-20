@@ -18,19 +18,15 @@ const ProfileEdit: React.FC<ProfileEditProps> = ({ user, refetch }) => {
 
   const { mutate, isLoading } = useMutation(updateUserProfile, {
     onSuccess: () => {
-      toast.success('Profile updated successfully!')
+      toast.success("Profile updated successfully!");
       refetch();
     },
   });
 
   const handleInput = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = event.target;
-
-    if (name === "name") {
-      setNameError(value.trim() === "" ? "Name cannot be empty" : null);
-    }
+    if (name === "name") setNameError(value.trim() === "" ? "Name cannot be empty" : null);
     if (name === "email") setEmailError(null);
-
     setUserData({ ...userData, [name]: value });
   };
 
