@@ -1,8 +1,12 @@
-# Getting Started with Create React App
+#  Interactive User Profile Interface
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project allows users to customize their own profile. A simple design was chosen to make the project more user-friendly. No styling library was used and all styles were written in css files.
 
 ## Available Scripts
+
+Install dependencies:
+
+### `npm install`
 
 In the project directory, you can run:
 
@@ -39,8 +43,52 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+## Features
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. User Profile Display: View detailed information about a user, including their full name, email, and bio.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+2. Profile Editing: Edit user profile details, such as name, email, and bio.
+
+3. Toggle Between Views: Toggle allows users to easily navigate to view and edit their data. The appearance attracts the user.
+
+4. React Query for Data Fetching: Utilizes the React Query library for efficient and reactive data fetching.
+
+5. Toast Notifications: Provides toast notifications for successful profile updates.
+
+## Hooks
+
+### `useSearchQuery`
+
+This hook facilitates interaction with query parameters in the URL, providing functions to get and set query parameters using React Router's useLocation and useNavigate. This is particularly useful for components that depend on dynamic query parameters, such as controlling the view or edit state in your UserInfo component.
+
+### Usage
+
+```bash
+import { useSearchQuery } from 'path/to/useSearchQuery';
+
+const { getQueryParam, setQueryParam } = useSearchQuery();
+
+const page = getQueryParam('page');
+
+setQueryParam('page', 'edit');
+```
+
+### `useSegmentEffect`
+
+This hook is designed to manage the visual effect of a segmented control, specifically for toggling between "view" and "edit" modes. It dynamically adjusts the width and position of a mask element to highlight the selected segment.
+
+## API using the MSW (Mock Service Worker) library.
+
+1. Get Users Endpoint:
+
+   - Path: /api/users
+   - Response: Returns a JSON array of user objects.
+
+2. Get User by ID Endpoint:
+
+   - Path: /api/user/:id
+   - Response: Returns the user with the specified ID if found; otherwise, returns a 404 status.
+
+3. Update User by ID Endpoint:
+   - Path: /api/user/:id (HTTP PUT)
+   - Response: Updates the user with the specified ID based on the data provided in the request body. Returns the updated user object.
