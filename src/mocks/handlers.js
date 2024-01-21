@@ -3,8 +3,8 @@ import { HttpResponse, http } from "msw";
 let users = [
   {
     id: 1,
-    name: "Abduvali Nazirov",
-    email: "nazirov@gmail.com",
+    name: "Bobur Madaminov",
+    email: "bobur@gmail.com",
     bio: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur qui voluptate fugit consequatur est. Voluptas sequi culpa enim. Vero, placeat!",
     image: "/images/person.jpg",
   },
@@ -21,6 +21,13 @@ let users = [
     email: "alijon@gmail.com",
     bio: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam recusandae repellendus illum unde iusto modi harum mollitia.",
     image: "/images/person3.jpg",
+  },
+  {
+    id: 4,
+    name: "Hasan Baxtiyorov",
+    email: "hasan@gmail.com",
+    bio: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam recusandae repellendus illum unde iusto modi harum mollitia.",
+    image: "/images/person4.jpg",
   },
 ];
 

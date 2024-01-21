@@ -27,6 +27,22 @@
   display: flex;
   position: relative;
 }
+.profile__title {
+  font-size: 20px;
+  line-height: 120%;
+  margin-bottom: 15px;
+  position: relative;
+  margin-left: 10px;
+}
+.profile__title::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 4px;
+  background-color: var(--main-color);
+  left: -10px;
+  top: -1px;
+}
 
 @media screen and (max-width: 1200px) {
   .detail__name {
@@ -71,5 +87,10 @@
   }
   .detail__name {
     width: 100px;
+  }
+
+  .profile__title {
+    font-size: 18px;
+    margin-bottom: 10px;
   }
 }

@@ -8,6 +8,7 @@ import UserInfo from "./pages/user_profile";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import NotFound from "./pages/not_found";
 
 const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
 
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
   {
     path: "/profile/:id",
     element: <UserInfo />,
+  },
+  {
+    path: "*",
+    element: <NotFound />,
   },
 ]);
 

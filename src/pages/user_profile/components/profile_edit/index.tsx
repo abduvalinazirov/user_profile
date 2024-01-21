@@ -8,7 +8,7 @@ import { toast } from "react-toastify";
 
 interface ProfileEditProps {
   user: IUser;
-  refetch: any;
+  refetch: () => void;
 }
 
 const ProfileEdit: React.FC<ProfileEditProps> = ({ user, refetch }) => {
@@ -41,6 +41,7 @@ const ProfileEdit: React.FC<ProfileEditProps> = ({ user, refetch }) => {
 
   return (
     <div className="profile__edit">
+      <h3 className="profile__title">Edit profile</h3>
       <div className="user__details">
         <div className="user_detail">
           <h4 className="detail__name">Full Name</h4>

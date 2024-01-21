@@ -8,6 +8,7 @@ interface ProfileViewProps {
 const ProfileView: React.FC<ProfileViewProps> = ({ user }) => {
   return (
     <div className="profile__view">
+      <h3 className="profile__title">Profile view</h3>
       <div className="user_detail">
         <h4 className="detail__name">Full Name</h4>
         <p className="detail__content">{user.name}</p>

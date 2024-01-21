@@ -18,7 +18,12 @@ function App() {
         <ul className="users__list">
           {users?.map((user) => (
             <li className="user__item" key={user.id}>
-              <Link to={`/profile/${user.id}`}>{user.name}</Link>
+              <Link to={`/profile/${user.id}`}>
+                <div className="user__wrapper">
+                  <img src={user.image} alt="" className="user__image" />
+                  <p className="user__name">{user.name}</p>
+                </div>
+              </Link>
             </li>
           ))}
         </ul>

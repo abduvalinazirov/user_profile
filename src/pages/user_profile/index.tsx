@@ -7,6 +7,7 @@ import { useQuery } from "react-query";
 import { getUser } from "../../services/userApi";
 import useSearchQuery from "../../hooks/useSearchQuery";
 import "./style.css";
+import NotFound from "../not_found";
 
 const UserInfo = () => {
   const { id } = useParams();
@@ -25,7 +26,7 @@ const UserInfo = () => {
   }
 
   if (isError || !data) {
-    return <div>Error: User not found</div>;
+    return <NotFound />;
   }
 
   return (

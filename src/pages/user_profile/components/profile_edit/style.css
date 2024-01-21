@@ -12,10 +12,14 @@
 .detail__input textarea {
   padding: 5px;
   border: 1px solid rgba(0, 0, 0, 0.211);
+  font-family: sans-serif;
   font-size: 14px;
   line-height: 100%;
   width: 100%;
   outline-color: var(--main-color);
+}
+.detail__input textarea{
+  resize: vertical;
 }
 .save__details {
   font-size: 14px;
